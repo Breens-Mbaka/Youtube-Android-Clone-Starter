@@ -1,4 +1,4 @@
-package com.breens.youtubeclonestarter.views.fragments
+package com.breens.youtubeclonestarter.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.breens.youtubeclonestarter.R
-import com.breens.youtubeclonestarter.databinding.FragmentSplashScreenBinding
+import com.breens.youtubeclonestarter.databinding.FragmentHomeScreenBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-class FragmentSplashScreen: Fragment(R.layout.fragment_splash_screen) {
-
-    private var _binding: FragmentSplashScreenBinding? = null
+class FragmentHomeScreen : Fragment(R.layout.fragment_home_screen) {
+    private var _binding: FragmentHomeScreenBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -19,7 +19,7 @@ class FragmentSplashScreen: Fragment(R.layout.fragment_splash_screen) {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentSplashScreenBinding.inflate(inflater, container, false)
+        _binding = FragmentHomeScreenBinding.inflate(inflater, container, false)
         hideActionBar()
         return binding.root
     }
